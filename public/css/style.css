@@ -1,0 +1,155 @@
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Satisfy&display=swap');
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+:root{
+    --primary-color:#419c53;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+body{
+    height: 120vh;
+    background: linear-gradient(to right,#419c53,#08ce2c);
+font-family: "Poppins";
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card{
+    margin: 120px auto;
+    width: 320px;
+    height: 500px;
+    background-color: #272D40;
+    border-radius: 14px;
+    padding: 20px;
+    position: relative;
+    color: white;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card_heart, .card_cart{
+ font-size: 20px;
+ position: absolute;
+ left: 8px;
+ top: 15px;
+}
+.card_cart{
+    left:unset;
+    right: 16px;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card_img{
+    width: 90%;
+    margin-left: 10px;
+    transition: 0.5s;
+}
+
+.card_img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card_title, .card_price{
+    font-size: 25px;
+font-weight: bold;
+text-align: center;
+transition: 0.5s;
+}
+.card_title{
+    color: var(--primary-color);
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card_size,.card_color{
+    display: flex;
+align-items: center;
+margin-bottom: 10px;
+}
+.card_size span{
+    padding: 1px 5px;
+    background: #dadada;
+    color: black;
+    border-radius: 5px;
+    margin: 0 2px;
+}
+
+.card_size span:hover{
+    transform: scale(0.8);
+}
+.card_color span{
+    width: 12px;
+    height: 12px;
+    border-radius: 50px;
+    margin: 0px 5px;
+}
+
+.card_color span:hover{
+    transform: scale(0.8);
+}
+.card_color-green{
+    background:green;
+}
+
+.card_color-red{
+    background-color: red;
+}
+.card_color-black{
+    background-color: black;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card_action button{
+background: var(--primary-color);
+border: none;
+outline: none;
+color: white;
+padding: 10px 20px;
+border-radius: 10px;
+font-weight: bold;
+margin-right: 10px;
+}
+.card_action button:hover{
+    transform: scale(0.9);
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card:hover .card_img{
+    transform:translateY(-90px);
+    
+}
+
+.card:hover .card_title,.card:hover .card_price{
+    transform:translateY(-70px);
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+
+.card_size{
+    margin-top: 150px;
+}
+
+.card_size, .card_color,.card_action{
+    
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.5s;
+    transition-delay: 0.1s;
+}
+.card:hover .card_size,
+.card:hover .card_color,
+.card:hover .card_action{
+    visibility: visible;
+    opacity: 100;
+    
+
+}
+.card:hover .card_size{
+    margin-top: -20px;
+}
+/*---------------------------------------------------------------------------------------------------------------------------------------------------*/
+.card_cart:hover{
+    color: #08ce2c;
+    cursor: pointer;
+}
+.card_heart:hover{
+    color: #e95025;
+    cursor: pointer;
+}
